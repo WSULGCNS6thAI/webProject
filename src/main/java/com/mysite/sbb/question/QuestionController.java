@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequiredArgsConstructor
 @Controller
 public class QuestionController {
-    private final QuestionRepository questionRepository;
+    private final QuestionService questionService;
 
     @RequestMapping("/list")
     public String list(Model model)  {
-        List<Question> questionList = this.questionRepository.findAll();
-        model.addAttribute("quesionList", questionList);
+        List<Question> questionList = this.questionService.getList();
+        model.addAttribute("questionList", questionList);
         return "question_list";
     }
 
