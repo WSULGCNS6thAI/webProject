@@ -19,10 +19,7 @@ public class SecurityConfig {
                 .csrf().ignoringAntMatchers("/h2-console/**")
                 .and()
                 .headers()
-                .addHeaderWriter(new XFrameOptionsHeaderWriter(
-                        XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
-
-        ;
+                .addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN));
         return http.build();
     }
     @Bean
