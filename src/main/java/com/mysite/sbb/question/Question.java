@@ -9,6 +9,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.persistence.ManyToOne;
+import com.mysite.sbb.user.SiteUser;
 @Getter
 @Setter
 @Entity
@@ -28,4 +30,7 @@ public class Question {
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+
+    @ManyToOne
+    private SiteUser author;
 }

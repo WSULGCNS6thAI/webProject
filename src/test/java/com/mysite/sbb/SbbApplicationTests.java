@@ -39,6 +39,7 @@ class SbbApplicationTests {
 		q2.setCreateDate(LocalDateTime.now());
 		this.questionRepository.save(q2);
 
+
 		/*List<Question> all = this.questionRepository.findAll();
 		assertEquals(2, all.size());
 
