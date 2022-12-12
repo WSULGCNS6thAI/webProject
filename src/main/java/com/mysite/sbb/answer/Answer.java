@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 
 import com.mysite.sbb.user.SiteUser;
 
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
+
 @Getter
 @Setter
 @Entity
@@ -27,4 +30,9 @@ public class Answer {
 
     @ManyToOne
     private SiteUser author;
+
+    private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }

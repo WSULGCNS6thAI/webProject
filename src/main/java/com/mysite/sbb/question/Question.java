@@ -11,6 +11,11 @@ import java.util.List;
 
 import javax.persistence.ManyToOne;
 import com.mysite.sbb.user.SiteUser;
+
+
+import java.util.Set;
+import jakarta.persistence.ManyToMany;
+
 @Getter
 @Setter
 @Entity
@@ -33,4 +38,9 @@ public class Question {
 
     @ManyToOne
     private SiteUser author;
+
+    private LocalDateTime modifyDate;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }
