@@ -14,7 +14,7 @@ import com.mysite.sbb.user.SiteUser;
 
 
 import java.util.Set;
-import jakarta.persistence.ManyToMany;
+import javax.persistence.ManyToMany;
 
 @Getter
 @Setter
